@@ -26,9 +26,19 @@
 
 to_boolean(<<"true">>) -> true;
 to_boolean("true") -> true;
+to_boolean(<<"yes">>) -> true;
+to_boolean("yes") -> true;
+to_boolean(<<"1">>) -> true;
+to_boolean("1") -> true;
 to_boolean(<<"false">>) -> false;
 to_boolean("false") -> false;
+to_boolean(<<"no">>) -> false;
+to_boolean("no") -> false;
+to_boolean(<<"0">>) -> false;
+to_boolean("0") -> false;
 to_boolean(false) -> false;
+to_boolean(no) -> false;
+to_boolean(yes) -> true;
 to_boolean(true) -> true.
 
 
